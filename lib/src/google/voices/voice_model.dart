@@ -53,7 +53,7 @@ class VoiceGoogle extends VoiceUniversal {
 
   static List<String> _toEngines(String name) {
     List<String> nameSegments = name.split('-');
-    if (nameSegments.length < 3) {
+    if (nameSegments.length > 2) {
       return [nameSegments[2].toLowerCase()];
     } else {
       return [nameSegments[0].toLowerCase()];
