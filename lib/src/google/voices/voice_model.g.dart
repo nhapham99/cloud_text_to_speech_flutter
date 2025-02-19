@@ -14,6 +14,6 @@ VoiceGoogle _$VoiceGoogleFromJson(Map<String, dynamic> json) => VoiceGoogle(
       nativeName: json['name'] as String,
       gender: VoiceGoogle._toGender(json['ssmlGender'] as String),
       locale: VoiceGoogle._toLocale(json['languageCodes'] as List),
-      sampleRateHertz:
-          VoiceGoogle._toSampleRateHertz(json['naturalSampleRateHertz'] as int),
+      sampleRateHertz: VoiceGoogle._toSampleRateHertz(
+          (json['naturalSampleRateHertz'] as num).toInt()),
     );
